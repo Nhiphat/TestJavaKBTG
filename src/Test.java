@@ -40,7 +40,12 @@ public class Test {
 //        System.out.println(solutionBulbShine.solution(new int[]{2,1,3,5,4}));
 //        System.out.println(solutionBulbShine.solution(new int[]{2,3,4,1,5}));
 
-        SolutionPeriodStable solutionPeriodStable = new SolutionPeriodStable();
-        System.out.println(solutionPeriodStable.solution(new int[] {-1,1,3,3,3,2,3,2,1,0}));
+//        SolutionPeriodStable solutionPeriodStable = new SolutionPeriodStable();
+//        System.out.println(solutionPeriodStable.solution(new int[] {-1,1,3,3,3,2,3,2,1,0}));
+
+            SolutionCountPoint solutionCountPoint = new SolutionCountPoint();
+            String[] T = new String[]{"codility1", "codility3", "codility2", "codility4b", "codility4a"};
+            String[] R = new String[]{"Wrong answer", "OK", "OK","Runtime error","OK"};
+            System.out.println(solutionCountPoint.solution(T,R));
     }
 }

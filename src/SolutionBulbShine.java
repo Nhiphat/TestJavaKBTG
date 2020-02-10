@@ -7,7 +7,7 @@ public class SolutionBulbShine {
         Set<Integer> store = new HashSet<>();
         int count = 0;
         for (int i = 0; i < a.length; i++) {
-            if (!store.contains(i + 1) && i + 1 != a[i])
+            if (store.contains(i + 1) == false && i + 1 != a[i])
                 missing.add(i + 1);
             if (i + 1 < a[i])
                 store.add(a[i]);
