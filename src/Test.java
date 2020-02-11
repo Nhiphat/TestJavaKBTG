@@ -43,9 +43,15 @@ public class Test {
 //        SolutionPeriodStable solutionPeriodStable = new SolutionPeriodStable();
 //        System.out.println(solutionPeriodStable.solution(new int[] {-1,1,3,3,3,2,3,2,1,0}));
 
-            SolutionCountPoint solutionCountPoint = new SolutionCountPoint();
-            String[] T = new String[]{"codility1", "codility3", "codility2", "codility4b", "codility4a"};
-            String[] R = new String[]{"Wrong answer", "OK", "OK","Runtime error","OK"};
-            System.out.println(solutionCountPoint.solution(T,R));
+//            SolutionCountPoint solutionCountPoint = new SolutionCountPoint();
+//            String[] T = new String[]{"codility1", "codility3", "codility2", "codility4b", "codility4a"};
+//            String[] R = new String[]{"Wrong answer", "OK", "OK","Runtime error","OK"};
+//            System.out.println(solutionCountPoint.solution(T,R));
+
+//        SolutionCountPair solutionCountPair = new SolutionCountPair();
+//        int [][] A = new int[][]{{2, 7, 5},{3,1,1},{2,1,-7},{0,2,1},{1,6,8}};
+//        System.out.println(solutionCountPair.solution(A));
+
+
     }
 }
