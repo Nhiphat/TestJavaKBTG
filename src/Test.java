@@ -52,11 +52,15 @@ public class Test {
 //        int [][] A = new int[][]{{2, 7, 5},{3,1,1},{2,1,-7},{0,2,1},{1,6,8}};
 //        System.out.println(solutionCountPair.solution(A));
 
-        SolutionCountWeekOfVacation solutionCountWeekOfVacation = new SolutionCountWeekOfVacation();
+//        SolutionCountWeekOfVacation solutionCountWeekOfVacation = new SolutionCountWeekOfVacation();
 //        solutionCountWeekOfVacation.solution(2020,"Febuary", "June", "Wednesday");
 //        solutionCountWeekOfVacation.solution(2020,"March","June","Wednesday");
-        System.out.println(solutionCountWeekOfVacation.solution(2014,"April","May","Wednesday"));
+//        System.out.println(solutionCountWeekOfVacation.solution(2014,"April","May","Wednesday"));
 //        System.out.println(solutionCountWeekOfVacation.solution(2020,"Febuary","March","Wednesday"));
+
+        SolutionCheckers solutionCheckers = new SolutionCheckers();
+        String B[] = new String[] {"..X...","......","....X.",".X....","..X.X.","...O.."};
+        System.out.println(solutionCheckers.solution(B));
 
     }
 }
