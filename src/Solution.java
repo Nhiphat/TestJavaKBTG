@@ -1,36 +1,58 @@
 public class Solution {
 
-    private String s;
-
-    public Solution(String s) {
-        this.s = s;
-    }
-
-    public String getS() {
-        return s;
-    }
-
-    public void setS(String s) {
-        this.s = s;
-    }
-
     public StringBuilder solution(String s){
-        Integer size = 5;
+        Integer numDash = 0;
+        if(standalize(s).length()%3 != 0){
+            numDash = standalize(s).length()/3;
+        }
+        else {
+            numDash = standalize(s).length()/3 -1;
+        }
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(s);
-        for (int i = 1;i<=size;i++){
-            if (i ==1){
-                stringBuilder = insertDash(stringBuilder,3);
+        StringBuilder finalString = new StringBuilder();
+        stringBuilder.append(standalize(s));
+        StringBuilder [] threeChar = new StringBuilder[numDash];
+        for (int i =0;i <threeChar.length;i++){
+            threeChar[i] = new StringBuilder();
+        }
+        for (int i = 0;i<numDash;i++){
+            if(stringBuilder.toString().length() == 4){
+                threeChar[i] = threeChar[i].append(stringBuilder.substring(0,2));
+                stringBuilder = stringBuilder.delete(0,2);
+                break;
             }
-            else
-                if (i>=3) stringBuilder = insertDash(stringBuilder,3*i+i-1);
-                else stringBuilder = insertDash(stringBuilder,3*i+1);
+            if(stringBuilder.toString().length() == 5){
+                threeChar[i] = threeChar[i].append(stringBuilder.substring(0,3));
+                stringBuilder.delete(0,3);
+                break;
+            }
+            threeChar[i] = threeChar[i].append(stringBuilder.substring(0,3));
+            stringBuilder = stringBuilder.delete(0,3);
+        }
+        for (int i = 0;i<threeChar.length;i++){
+            System.out.println(threeChar[threeChar.length-1]);
+            threeChar[i] = insertDash(threeChar[i]);
 
         }
+        for(int i = 0;i<threeChar.length;i++){
+            if(i==threeChar.length-1){
+                finalString = finalString.append(threeChar[i]);
+                finalString = finalString.append(stringBuilder);
+            }
+            else {
+                finalString = finalString.append(threeChar[i]);
+            }
+        }
+        return finalString;
+
+    }
+    private StringBuilder insertDash(StringBuilder stringBuilder){
+        stringBuilder.append("-");
         return stringBuilder;
     }
-    private StringBuilder insertDash(StringBuilder stringBuilder, int quotient){
-        stringBuilder.insert(quotient,"-");
-        return stringBuilder;
+    private String standalize(String s){
+        s = s.replaceAll(" ","");
+        s = s.replaceAll("-","");
+        return s;
     }
 }

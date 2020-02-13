@@ -11,8 +11,8 @@ import java.util.TimeZone;
 
 public class Test {
     public static void main(String[] args) {
-//        Solution solution = new Solution("0000000000000000");
-//        solution.solution(solution.getS());
+//        Solution solution = new Solution();
+//        System.out.println(solution.solution("  0000000   0  000--0000"));
 
 
 //        SolutionTreesOrder solutionTreesOrder = new SolutionTreesOrder();
@@ -58,9 +58,14 @@ public class Test {
 //        System.out.println(solutionCountWeekOfVacation.solution(2014,"April","May","Wednesday"));
 //        System.out.println(solutionCountWeekOfVacation.solution(2020,"Febuary","March","Wednesday"));
 
-        SolutionCheckers solutionCheckers = new SolutionCheckers();
-        String B[] = new String[] {"..X...","......","....X.",".X....","..X.X.","...O.."};
-        System.out.println(solutionCheckers.solution(B));
+//        SolutionCheckers solutionCheckers = new SolutionCheckers();
+//        String B[] = new String[] {"..X...","......","....X.",".X....","..X.X.","...O.."};
+//        System.out.println(solutionCheckers.solution(B));
+//        String B1[] = new String[]{"X....",".X...","..O..","...X.","....."};
+//        System.out.println(solutionCheckers.solution(B1));
+
+        SolutionPrintTable solutionPrintTable = new SolutionPrintTable();
+        solutionPrintTable.solution(new int[]{4,35,80,123,12345,44,8,5,24,3},4);
 
     }
 }

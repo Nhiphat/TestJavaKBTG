@@ -11,10 +11,10 @@ public class SolutionCheckers {
         if(!checkCanGo(B,i,j))
             return 0;
         else {
-            if(!(checkCanGo(B,i-2,j-2)||checkCanGo(B,i-2,i+2))) {
+            if(!(checkCanGo(B,i-2,j-2)||checkCanGo(B,i-2,j+2))) {
                 return 1;
             }
-            return countPawn(B,i-2,j-2) + countPawn(B,i-2,i+2);
+            return countPawn(B,i-2,j-2) + countPawn(B,i-2,j+2);
         }
     }
     private int[] findPointOfO(String []B){
@@ -35,17 +35,17 @@ public class SolutionCheckers {
             return false;
         }
         if(j <2){
-            if(B[i-1].charAt(j+1) == '.' && B[i-2].charAt(j+2) =='X')
+            if(B[i-1].charAt(j+1) == 'X' && B[i-2].charAt(j+2) =='.')
                 return true;
             return false;
         }
         if(j > B[i].length()-2){
-            if(B[i-1].charAt(j-1) == 'X' && B[i-2].charAt(j-2) == 'X'){
+            if(B[i-1].charAt(j-1) == 'X' && B[i-2].charAt(j-2) == '.'){
                 return true;
             }
             return false;
         }
-        if((B[i-1].charAt(j+1) == '.' && B[i-2].charAt(j+2) =='X') ||(B[i-1].charAt(j-1) == 'X' && B[i-2].charAt(j-2) == 'X'))
+        if((B[i-1].charAt(j+1) == 'X' && B[i-2].charAt(j+2) =='.') ||(B[i-1].charAt(j-1) == 'X' && B[i-2].charAt(j-2) == '.'))
             return true;
         return false;
     }
