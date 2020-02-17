@@ -1,16 +1,14 @@
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-import java.util.TimeZone;
+import java.util.*;
 
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 //        Solution solution = new Solution();
 //        System.out.println(solution.solution("  0000000   0  000--0000"));
 
@@ -36,9 +34,11 @@ public class Test {
 //        SolutionCompareTwoString solutionCompareTwoString = new SolutionCompareTwoString();
 //        System.out.println(solutionCompareTwoString.solution("nice", "nicer"));
 
-//        SolutionBulbShine solutionBulbShine = new SolutionBulbShine();
-//        System.out.println(solutionBulbShine.solution(new int[]{2,1,3,5,4}));
-//        System.out.println(solutionBulbShine.solution(new int[]{2,3,4,1,5}));
+        SolutionBulbShine solutionBulbShine = new SolutionBulbShine();
+        System.out.println(solutionBulbShine.solution(new int[]{2,1,3,5,4}));
+        System.out.println(solutionBulbShine.solution(new int[]{2,3,4,1,5}));
+        System.out.println(solutionBulbShine.solution(new int[]{1,3,4,2,5}));
+
 
 //        SolutionPeriodStable solutionPeriodStable = new SolutionPeriodStable();
 //        System.out.println(solutionPeriodStable.solution(new int[] {-1,1,3,3,3,2,3,2,1,0}));
@@ -64,8 +64,38 @@ public class Test {
 //        String B1[] = new String[]{"X....",".X...","..O..","...X.","....."};
 //        System.out.println(solutionCheckers.solution(B1));
 
-        SolutionPrintTable solutionPrintTable = new SolutionPrintTable();
-        solutionPrintTable.solution(new int[]{4,35,80,123,12345,44,8,5,24,3},4);
+//        SolutionPrintTable solutionPrintTable = new SolutionPrintTable();
+//        solutionPrintTable.solution(new int[]{4,35,80,123,12345,44,8,5,24,3},4);
+
+//        CountMinMovesSixSide countMinMovesSixSide = new CountMinMovesSixSide();
+//        System.out.println(countMinMovesSixSide.solution(new int [] {1,2,3}));
+//        System.out.println(countMinMovesSixSide.solution(new int [] {1,1,6}));
+//        System.out.println(countMinMovesSixSide.solution(new int [] {1,6,2,3}));
+
+//        SolutionPermutationString solutionPermutationString = new SolutionPermutationString();
+//        List<String> list = solutionPermutationString.permutations("abcd");
+//        for (String s: list){
+//            System.out.println(s);
+//        }
+
+//        SolutionCountDiverse solutionCountDiverse = new SolutionCountDiverse();
+//        System.out.println(solutionCountDiverse.solution(6,1,1));
+//        System.out.println(solutionCountDiverse.solution(1,3,1));
+//        System.out.println(solutionCountDiverse.solution(0,1,8));
+//        System.out.println(solutionCountDiverse.solution(1,1,8));
+
+//        SolutionSoliderReport solutionSoliderReport = new SolutionSoliderReport();
+//        System.out.println(solutionSoliderReport.solution(new int[] {3,4,3,0,2,2,3,0,0}));
+
+//        SolutionCountInteresting solutionCountInteresting = new SolutionCountInteresting();
+//        System.out.println(solutionCountInteresting.solution("15:15:00","15:15:12"));
+//        System.out.println(solutionCountInteresting.solution("22:22:21","22:22:23"));
+//        System.out.println(solutionCountInteresting.solution("02:59:59","03:01:05"));
+
+//        CountMinMovesSixSide countMinMovesSixSide = new CountMinMovesSixSide();
+//        System.out.println(countMinMovesSixSide.solution(new int[] {1,2,3}));
+//        System.out.println(countMinMovesSixSide.solution(new int[] {1,1,6}));
+//        System.out.println(countMinMovesSixSide.solution(new int[] {1,6,2,3}));
 
     }
 }

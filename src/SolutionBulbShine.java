@@ -1,21 +1,46 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SolutionBulbShine {
     public int solution(int [] a){
-        Set<Integer> missing = new HashSet<>();
-        Set<Integer> store = new HashSet<>();
         int count = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (store.contains(i + 1) == false && i + 1 != a[i])
-                missing.add(i + 1);
-            if (i + 1 < a[i])
-                store.add(a[i]);
-            else
-                missing.remove(a[i]);
-            if (missing.isEmpty())
+        List<Bulb> bulbArrayList = new ArrayList<>();
+        for (int i = 0; i <a.length;i++){
+            bulbArrayList.add(new Bulb());
+        }
+        for (int i = 0;i<a.length;i++){
+            boolean isAllOk = true;
+            bulbArrayList.get(a[i]-1).isOn = true;
+            if((a[i] == 1))
+                bulbArrayList.get(0).isShine = true;
+            for (int j = 0; j < a.length; j++){
+                if(checkCanShine(a[j],bulbArrayList))
+                    bulbArrayList.get(j).isShine = true;
+            }
+
+            for (int k = 0; k < a.length;k++){
+                if(bulbArrayList.get(k).isOn && !bulbArrayList.get(k).isShine)
+                    isAllOk = false;
+            }
+            if (isAllOk)
                 count++;
         }
         return count;
+    }
+    private boolean checkCanShine(int a, List<Bulb> arrayList){
+        boolean check = false;
+        boolean allOnBefore = true;
+        for (int i = 0; i< a; i ++){
+            if(!arrayList.get(i).isOn){
+                allOnBefore = false;
+            }
+        }
+        if(allOnBefore)
+            return true;
+        return false;
+    }
+    class Bulb {
+        private boolean isOn = false;
+        private boolean isShine = false;
     }
 }
