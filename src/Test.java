@@ -34,10 +34,10 @@ public class Test {
 //        SolutionCompareTwoString solutionCompareTwoString = new SolutionCompareTwoString();
 //        System.out.println(solutionCompareTwoString.solution("nice", "nicer"));
 
-        SolutionBulbShine solutionBulbShine = new SolutionBulbShine();
-        System.out.println(solutionBulbShine.solution(new int[]{2,1,3,5,4}));
-        System.out.println(solutionBulbShine.solution(new int[]{2,3,4,1,5}));
-        System.out.println(solutionBulbShine.solution(new int[]{1,3,4,2,5}));
+//        SolutionBulbShine solutionBulbShine = new SolutionBulbShine();
+//        System.out.println(solutionBulbShine.solution(new int[]{2,1,3,5,4}));
+//        System.out.println(solutionBulbShine.solution(new int[]{2,3,4,1,5}));
+//        System.out.println(solutionBulbShine.solution(new int[]{1,3,4,2,5}));
 
 
 //        SolutionPeriodStable solutionPeriodStable = new SolutionPeriodStable();
@@ -78,11 +78,11 @@ public class Test {
 //            System.out.println(s);
 //        }
 
-//        SolutionCountDiverse solutionCountDiverse = new SolutionCountDiverse();
-//        System.out.println(solutionCountDiverse.solution(6,1,1));
-//        System.out.println(solutionCountDiverse.solution(1,3,1));
-//        System.out.println(solutionCountDiverse.solution(0,1,8));
-//        System.out.println(solutionCountDiverse.solution(1,1,8));
+        SolutionCountDiverse solutionCountDiverse = new SolutionCountDiverse();
+        System.out.println(solutionCountDiverse.solution(6,1,1));
+        System.out.println(solutionCountDiverse.solution(1,3,1));
+        System.out.println(solutionCountDiverse.solution(0,1,8));
+        System.out.println(solutionCountDiverse.solution(1,1,8));
 
 //        SolutionSoliderReport solutionSoliderReport = new SolutionSoliderReport();
 //        System.out.println(solutionSoliderReport.solution(new int[] {3,4,3,0,2,2,3,0,0}));
@@ -96,6 +96,22 @@ public class Test {
 //        System.out.println(countMinMovesSixSide.solution(new int[] {1,2,3}));
 //        System.out.println(countMinMovesSixSide.solution(new int[] {1,1,6}));
 //        System.out.println(countMinMovesSixSide.solution(new int[] {1,6,2,3}));
+
+//        SolutionReverseInteger solutionReverseInteger = new SolutionReverseInteger();
+//        System.out.println(solutionReverseInteger.solution(-123));
+
+//        LinkedList<Integer> A = new LinkedList<>();
+//        LinkedList<Integer> B = new LinkedList<>();
+//        for (int i = 1; i<= 3; i++){
+//            A.add(i);
+//            B.add(i*2);
+//        }
+//        SumReverseLinkedList sumReverseLinkedList = new SumReverseLinkedList();
+//        sumReverseLinkedList.solution(A,B);
+
+//        Solution solution = new Solution();
+//        String result = solution.solution(0, 2, 2);
+//        System.out.println(result);
 
     }
 }
