@@ -21,26 +21,26 @@ public class InfixToPostfix {
     {
         
         String postfix = "";
-        for (int i = 0; i < infix.length(); ++i) {
-            String index = String.valueOf(infix.charAt(i));
-            if (isNumber(index)) {
-                postfix.concat(index);
-            } else {
-                if (stack.empty()) {
-                    stack.push(index);
-                } else {
-                    if (stack.get(stack.size()).equals("(")) {
-                        stack.push(index);
-                    } else 
-                }
-            }
-            if (index.equals("(")) {
-            
-            }
-            if (index.equals(")")) {
-            
-            }
-        }
+//        for (int i = 0; i < infix.length(); ++i) {
+//            String index = String.valueOf(infix.charAt(i));
+//            if (isNumber(index)) {
+//                postfix.concat(index);
+//            } else {
+//                if (stack.empty()) {
+//                    stack.push(index);
+//                } else {
+//                    if (stack.get(stack.size()).equals("(")) {
+//                        stack.push(index);
+//                    } else
+//                }
+//            }
+//            if (index.equals("(")) {
+//
+//            }
+//            if (index.equals(")")) {
+//
+//            }
+//        }
         
         return postfix;
     }
