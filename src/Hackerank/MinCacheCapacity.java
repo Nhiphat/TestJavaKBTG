@@ -6,10 +6,39 @@ import java.util.List;
 
 public class MinCacheCapacity {
     public static void main(String argv[]) {
+        
+        
+        
         List<String> A = Arrays.asList("item1", "item1","item3","item1","item3");
         int res = solution(5,A,1);
         System.out.println(res);
     }
+     public String longestCommonPrefix(String[] strs) {
+        String res = "";
+        String tempRes = "";
+        boolean stop = false;
+        int index = 0;
+        while (stop) {
+            String temp = "".concat(String.valueOf(strs[0].charAt(index)));
+            boolean match = true;
+            for (int i = 1; i < strs.length; i++) {
+                
+                if (!strs[i].contains(tempRes)) {
+                    match = false;
+                }
+            }
+            if (match) {
+                tempRes = tempRes.concat(temp);
+            } else {
+                tempRes.substring(0, tempRes.length() - 1);
+                stop = true;
+            }
+        }
+        return tempRes;
+    }
+    
+    
+    
     public static int solution(int n, List<String> A, int k) {
         int res = -1;
         int cacheHits = 0;
